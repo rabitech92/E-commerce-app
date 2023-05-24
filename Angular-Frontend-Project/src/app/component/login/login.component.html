@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Design by foolishdeveloper.com -->
+   
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <style media="screen">
+       
+
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form  #loginfrom="ngForm">
+        <h3>Login Here</h3>
+
+        <label for="username">Username :</label>
+        <input type="text" placeholder="User Name" id="username" [(ngModel)]="loginObj.userName" name="userName">
+
+
+
+        <label for="type">Choose User Type:</label>
+        <select name="type" id="type" [(ngModel)]="loginObj.userType" name="userType">
+            <option value="Admin">Admin</option>
+            <option value="Seller">Seller</option>
+            <option value="Manager">Manager</option>
+        </select>
+
+        <label for="password">Password :</label>
+        <input type="password" placeholder="Password" id="password" class="form-control password" [(ngModel)]="loginObj.password" name="password">
+
+        <button  class="log" (click)="login()">Log In</button>
+    </form>
+</body>
+
+</html>
